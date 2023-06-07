@@ -1,16 +1,15 @@
-
-
 import {  Request, Response } from 'express';
 import { where } from 'sequelize/types';
 
 import { Venta, VentaI } from '../models/venta';
 import { Cliente } from '../models/cliente';
+import { Coche, CocheI } from '../models/coche';
 
-export class VentaController{
-        //metdo mostrar ventas
-    public async getAllVenta(req: Request, res:Response){
+export class CocheController{
+        //metdo mostrar coches
+    public async getAllCoche(req: Request, res:Response){
         try {
-            const venta: VentaI[] = await Venta.findAll({
+            const coche: CocheI[] = await Coche.findAll({
                 include: [
                     {
                         model: Cliente,
@@ -19,7 +18,7 @@ export class VentaController{
                     }
                 ]
             }) // select * from clientes;
-            res.status(200).json({venta})
+            res.status(200).json({coche})
         } catch (error) {
 
         }

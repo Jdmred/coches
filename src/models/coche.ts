@@ -27,27 +27,27 @@ Venta.init(
             allowNull: false
         },
         pvc: {
-            type: DataTypes.NUMBER,
+            type: DataTypes.INTEGER,
             allowNull: false,
             unique: true
         },
-        modeloId: {
-            type: DataTypes.INTEGER,
-            allowNull: false
+       // modeloId: {
+           // type: DataTypes.INTEGER,
+            //allowNull: false
             //refereces:{
               //  model: Marca,
               //  key:'id',
            // }
             
-        },
-        clienteId: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-            references: {
-                model: Cliente,
-                key: 'id',
-            }
-        }
+        //},
+        //clienteId: {
+          //  type: DataTypes.INTEGER,
+            //allowNull: false,
+            //references: {
+              //  model: Cliente,
+               // key: 'id',
+            //}
+        //}
     },
     {
         tableName: "coches",
