@@ -3,8 +3,11 @@ const Sequelize = require('sequelize');
 const DB_NAME = 'venta_coches';
 
 const DB_USER = 'root';
-
 const DB_PASS = '123456789';
+
+
+
+const DB_PASS = '';
 
 export const database = new Sequelize(
     DB_NAME,
