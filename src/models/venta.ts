@@ -1,6 +1,5 @@
 import { Model, DataTypes } from "sequelize";
 import { database } from "../database/db";
-
 import { Cliente } from "./cliente";
 
 export class Venta extends Model {

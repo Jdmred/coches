@@ -4,7 +4,7 @@ const DB_NAME = 'venta_coches';
 
 const DB_USER = 'root';
 
-const DB_PASS = '';
+const DB_PASS = '123456789';
 
 export const database = new Sequelize(
     DB_NAME,
@@ -20,7 +20,7 @@ export const database = new Sequelize(
 );
 
 async function generateDb() {
-    await database.sync({ force: false })
+    await database.sync({ force: true })
     console.log('Base de datos y tablas creada');
 }
 
